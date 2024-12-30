@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="/css/bookingForm.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a class="logoA" href="/html/index.html">
+          <img src="/assets/heladiLogo.png" alt="Healdi Logo" />
+        </a>
+
+        <nav>
+          <ul>
+            <li><a class="liAnchor" href="/html/index.html"> HOME </a></li>
+            <li><a class="liAnchor" href="/html/#about"> ABOUT </a></li>
+            <li><a class="liAnchor" href="/html/#contact"> CONTACT </a></li>
+          </ul>
+        </nav>
+
+        <div class="btnDiv">
+          <a href="/html/dashboard.html"
+            ><button class="dashboardBtn">DASHBOARD</button></a
+          >
+          <a href="/html/signUp.html"
+            ><button class="signInBtn">SIGN IN</button></a
+          >
+        </div>
+
+        <i class="bx bx-menu toggle-menu" id="toggleMenu"></i>
+      </header>
+
+      <main>
+        <h1>Appointment Form</h1>
+      </main>
+
+      <form>
+        <div class="sectionCardHolder">
+          <div class="sectionTextsAndImg">
+            <label>Make An Appointment</label>
+            <div class="imgDiv">
+              <img src="/assets/heartRateIcon.svg" alt="Heart Rate Image" />
+            </div>
+          </div>
+
+          <div class="sectionInputs">
+            <input type="text" placeholder="Name" />
+            <input type="number" placeholder="Phone" />
+
+            <div class="sectionInputsLower">
+              <div class="sectionCustomSelects">
+                <select>
+                  <option value="">--Gender--</option>
+                  <option value="male">Male</option>
+                  <option value="memale">Female</option>
+                </select>
+
+                <select>
+                  <option value="">--Doctors--</option>
+                  <option value="nelson">Nelson Q.</option>
+                  <option value="ashabi">Ashabi Babajide</option>
+                  <option value="chika">Chika Chineye</option>
+                </select>
+              </div>
+
+              <div class="sectionDateAndTimeInput">
+                <input type="date" placeholder="Date" />
+                <input type="time" placeholder="Time" />
+              </div>
+            </div>
+          </div>
+          <div class="bookBtn">
+            <button>Book Appointment</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

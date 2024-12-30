@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #1ebeb6;
+  --secondary: #01847e;
+  --white: #fff;
+  --black: #000;
+  --grey: #d9d9d9;
+  --textGrey: #808080;
+  --servicesCardGrey: #eeeeee;
+  --footerBlue: #001d4c;
+  --circleBorder: #a6c8c6;
+  --atServicesGrey: #bbbebe;
+  --textBlue: #233645;
+  --docsBackground: #f7f7f7;
+  --docProColour: #e1f1f1;
+  --footerPTexts: #8b9fb8;
+  --footerCard: #0d2955;
+  --footerBottom: #082452;
+  --bookingInput: #35c5bd;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  height: 80px;
+  padding: 0 230px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+header .logoA {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+header nav ul li .liAnchor {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+header nav ul li .liAnchor:hover {
+  color: var(--primary);
+}
+
+.btnDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.btnDiv .dashboardBtn,
+.signInBtn {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnDiv .dashboardBtn {
+  padding: 10px 14px;
+}
+.btnDiv .signInBtn {
+  padding: 12px 18px;
+}
+
+.btnDiv .dashboardBtn {
+  background-color: var(--white);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btnDiv .signInBtn {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+}
+
+main {
+  background: var(--primary);
+  text-align: center;
+  padding: 80px;
+}
+
+main h1 {
+  font-size: 32px;
+  color: var(--white);
+}
+
+form {
+  background-color: var(--white);
+  padding: 90px 450px;
+}
+
+form .sectionCardHolder {
+  background-color: var(--primary);
+  padding: 60px;
+  border-radius: 5px;
+}
+
+form .sectionCardHolder .sectionTextsAndImg {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form .sectionCardHolder .sectionTextsAndImg label {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+}
+
+form .sectionCardHolder .sectionTextsAndImg .imgDiv {
+  width: 100%;
+  margin-top: 20px;
+}
+
+form .sectionCardHolder .sectionInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+form .sectionCardHolder .sectionInputs input {
+  padding: 22px 30px;
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid var(--white);
+  background: var(--bookingInput);
+  color: white;
+  width: 100%;
+}
+
+form .sectionCardHolder .sectionInputs input::placeholder {
+  color: white;
+}
+
+form
+  .sectionCardHolder
+  .sectionInputs
+  .sectionInputsLower
+  .sectionCustomSelects {
+  display: flex;
+  gap: 40px;
+}
+
+form
+  .sectionCardHolder
+  .sectionInputs
+  .sectionInputsLower
+  .sectionCustomSelects
+  select {
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--bookingInput);
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  padding: 5px 30px;
+  width: 100%;
+  height: 65px;
+  font-size: 13px;
+}
+
+form .sectionCardHolder .sectionDateAndTimeInput {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+form .sectionCardHolder .sectionDateAndTimeInput input {
+  padding: 20px 30px;
+}
+
+form .sectionCardHolder .bookBtn button {
+  padding: 18px 45px;
+  background-color: var(--white);
+  color: var(--primary);
+  margin-top: 50px;
+  border-radius: 30px;
+  display: flex;
+  justify-self: center;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 60px;
+    padding: 0 40px;
+  }
+
+  header .logoA {
+    width: 100px;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: var(--secondary);
+    padding-top: 20px;
+  }
+
+  header nav ul li .liAnchor,
+  header nav ul .liHidden a {
+    color: var(--white);
+  }
+
+  header nav ul .liHidden {
+    display: flex;
+  }
+
+  header .btnDiv {
+    display: none;
+  }
+
+  header .toggle-menu {
+    display: flex;
+  }
+
+  main {
+    padding: 50px 20px;
+  }
+
+  main h1 {
+    font-size: 26px;
+  }
+
+  form {
+    padding: 50px 40px;
+  }
+
+  form .sectionCardHolder .sectionTextsAndImg label {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header {
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  header .logoA {
+    width: 75px;
+  }
+
+  header .toggle-menu {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  main h1 {
+    font-size: 18px;
+  }
+
+  form {
+    padding: 40px 20px;
+  }
+
+  form .sectionCardHolder {
+    padding: 20px;
+  }
+
+  form .sectionCardHolder .sectionInputs {
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  form .sectionCardHolder .sectionInputs input {
+    padding: 12px 30px;
+  }
+
+  form .sectionCardHolder .sectionTextsAndImg {
+    align-items: center;
+  }
+
+  form .sectionCardHolder .sectionTextsAndImg label {
+    font-size: 18px;
+  }
+
+  form .sectionCardHolder .sectionTextsAndImg .imgDiv {
+    margin-top: 10px;
+  }
+
+  form .sectionCardHolder .sectionTextsAndImg .imgDiv img {
+    width: 120px;
+  }
+
+  form
+    .sectionCardHolder
+    .sectionInputs
+    .sectionInputsLower
+    .sectionCustomSelects {
+    gap: 20px;
+  }
+
+  form
+    .sectionCardHolder
+    .sectionInputs
+    .sectionInputsLower
+    .sectionCustomSelects
+    select {
+    height: 46px;
+    font-size: 13px;
+  }
+
+  form
+    .sectionCardHolder
+    .sectionInputs
+    .sectionInputsLower
+    .sectionCustomSelects,
+  form .sectionCardHolder .sectionDateAndTimeInput {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  form .sectionCardHolder .sectionDateAndTimeInput {
+    margin-top: 20px;
+  }
+
+  form .sectionCardHolder .bookBtn button {
+    padding: 12px 20px;
+    font-size: 12px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form .sectionCardHolder .sectionInputs input {
+    padding: 8px 20px;
+  }
+
+  form
+    .sectionCardHolder
+    .sectionInputs
+    .sectionInputsLower
+    .sectionCustomSelects
+    select {
+    height: 38px;
+    padding: 8px 20px;
+  }
+}

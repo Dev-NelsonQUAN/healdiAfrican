@@ -1,0 +1,2112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #1ebeb6;
+  --secondary: #01847e;
+  --btnOutline: #1bb8b0;
+  --white: #fff;
+  --black: #000;
+  --grey: #d9d9d9;
+  --textGrey: #808080;
+  --servicesCardGrey: #eeeeee;
+  --footerBlue: #001d4c;
+  --circleBorder: #a6c8c6;
+  --atServicesGrey: #bbbebe;
+  --textBlue: #233645;
+  --docsBackground: #f7f7f7;
+  --docProColour: #e1f1f1;
+  --footerPTexts: #8b9fb8;
+  --footerCard: #0d2955;
+  --footerBottom: #082452;
+}
+
+body {
+  background: var(--white);
+  height: auto;
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  height: 80px;
+  padding: 0 230px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+header .logoA {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+header nav ul li .liAnchor,
+header nav ul .liHidden a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+header nav ul li .liAnchor:hover,
+header nav ul .liHidden a:hover {
+  color: var(--primary);
+}
+
+header nav ul .liHidden {
+  display: none;
+}
+
+header .btnDiv {
+  display: flex;
+  gap: 20px;
+}
+
+header .btnDiv .dashboardBtn,
+.signInBtn {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .btnDiv .dashboardBtn {
+  padding: 10px 14px;
+}
+header .btnDiv .signInBtn {
+  padding: 12px 18px;
+}
+
+header .btnDiv .dashboardBtn {
+  background-color: var(--white);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+header .btnDiv .dashboardBtn:hover {
+  font-size: 14px;
+}
+
+header .btnDiv .signInBtn {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+header .btnDiv .signInBtn:hover {
+  font-size: 14px;
+}
+
+header .toggle-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 27px;
+}
+
+main {
+  height: calc(100vh - 80px);
+  background: url("/assets/heropageDoctors.svg") top/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+main .mainOverlay {
+  height: calc(100vh - 72px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 1;
+}
+
+main .mainContainer {
+  width: 100%;
+  padding: 0 230px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  color: var(--white);
+  z-index: 2;
+}
+
+main p {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+main .hDiv {
+  width: 500px;
+  line-height: 65px;
+  margin-bottom: 10px;
+}
+
+main .hDiv .meet,
+.best {
+  font-size: 75px;
+}
+
+main .hDiv .meet {
+  font-weight: 400;
+}
+
+main .hDiv .best {
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+main .mainBtn button {
+  padding: 16px 20px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border: 1px solid var(--btnOutline);
+  color: white;
+  border-radius: 5px;
+  /* border: none; */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+main .mainBtn button .mainBtnSpan {
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .mainBtn button ion-icon {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+section {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--textGrey);
+}
+
+section .sectionInner {
+  padding: 120px 230px;
+  display: flex;
+  gap: 70px;
+}
+
+section .sectionInner .sectionOneCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+}
+
+section .sectionInner .sectionOneCard .emergencyTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section .sectionInner .sectionOneCard .emergencyTexts h6 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--textBlue);
+  margin-bottom: 15px;
+}
+
+section .sectionInner .sectionOneCard .emergencyTexts p {
+  font-size: 15px;
+  line-height: 30px;
+  color: var(--textGrey);
+}
+
+section .sectionInner .sectionOneCard .sectionPhone {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  border-top: 1px dashed var(--textGrey);
+  color: var(--textGrey);
+  font-size: 15px;
+}
+
+section .sectionInner .sectionOneCard .sectionPhone .number {
+  color: var(--textBlue);
+}
+
+section .sectionInner .sectionCardImg {
+  /* width: 100%; */
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .sectionInner .sectionCardImg img {
+  /* width: 100%; */
+  height: 98%;
+  object-fit: cover;
+}
+
+.sectionTwoSect .sectionTwo {
+  width: 100%;
+  background: url("/assets/sectionTwoBackground.svg") center/cover no-repeat;
+  display: flex;
+  gap: 55px;
+  padding: 130px 230px;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft .sectionTwoLeftImg {
+  height: 100%;
+  width: 90%;
+  background: url("/assets/sectionTwoNurses.jpg") center/cover no-repeat;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder {
+  padding: 40px 20px;
+  background-color: var(--white);
+  position: absolute;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoLeft
+  .introVideoHolder
+  .introCircle
+  ion-icon {
+  color: var(--white);
+  font-size: 45px;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introTexts h5 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introTexts p {
+  width: 300px;
+  color: var(--textGrey);
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight {
+  width: 100%;
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts .hasBeenTxt {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts h3 {
+  font-size: 32px;
+  color: var(--textBlue);
+  font-weight: 500;
+  width: 500px;
+  line-height: 36px;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts .ourCentres {
+  width: 95%;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--textGrey);
+}
+
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightTexts
+  .sectionRecieveTxt {
+  font-weight: bold;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightIconslower {
+  display: flex;
+  gap: 80px;
+}
+
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightIconslower
+  .onlineApp,
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightIconslower
+  .healthQueries {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightIconslower
+  .onlineApp
+  .onlinAeppIcon,
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightIconslower
+  .healthQueries
+  .healthQueriesIcon {
+  width: 50px;
+}
+
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightIconslower
+  .onlineApp
+  .onlinAeppIcon
+  img,
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightIconslower
+  .healthQueries
+  .healthQueriesIcon
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightBtn button {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border: 1px solid var(--btnOutline);
+  padding: 16px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.sectionTwoSect
+  .sectionTwo
+  .sectionTwoRight
+  .sectionTwoRightBtn
+  button
+  .sectionTwoRightBtnSpan {
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionTwoSpan {
+  color: var(--primary);
+}
+
+.servicesDept {
+  background: url("/assets/servicesBackground.svg") center/cover no-repeat;
+  padding: 100px 230px 170px 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.servicesDept .servicesTexts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servicesDept .servicesTexts .servicesHeadTexts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.servicesDept .servicesTexts .servicesHeadTexts h4 {
+  color: var(--primary);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.servicesDept .servicesTexts .servicesHeadTexts h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--textBlue);
+}
+
+.servicesDept .servicesTexts p {
+  color: var(--textGrey);
+  /* width: 80%; */
+  width: 900px;
+  text-align: center;
+  line-height: 34px;
+}
+
+hr {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  border-top: 4px solid var(--primary);
+}
+
+.servicesDept .servicesCards {
+  display: flex;
+  gap: 25px;
+}
+
+.servicesDept .servicesCards .eyeCare {
+  padding: 10px 10px 30px 10px;
+  background-color: var(--servicesCardGrey);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+}
+
+.servicesDept .servicesCards .eyeCare .servicesImgDiv {
+  width: 100%;
+  height: 250px;
+}
+
+.servicesDept .servicesCards .eyeCare .servicesImgDiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.servicesDept .servicesCards .eyeCare .serviceCardtexts {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--textBlue);
+}
+
+.servicesDept .servicesCards .eyeCare .serviceCardtexts h3 {
+  font-size: 24px;
+}
+
+.servicesDept .servicesCards .eyeCare .serviceCardtexts p {
+  font-size: 14px;
+  line-height: 27px;
+}
+
+.servicesDept .servicesCards .eyeCare .serviceCardtexts .suddenTxt {
+  color: var(--textGrey);
+}
+
+.servicesDept .servicesCards .eyeCare .serviceCardtexts .servicesDeptHead {
+  font-weight: 600;
+}
+
+.servicesDept
+  .servicesCards
+  .eyeCare
+  .serviceCardtexts
+  .servicesDeptHead
+  .serviceDocsName {
+  font-weight: 300;
+}
+
+.servicesDept .servicesCards .eyeCare .servicesCircle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 5px solid var(--circleBorder);
+  background-color: var(--primary);
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesDept .servicesCards .eyeCare .servicesCircle .bx-right-arrow-alt {
+  color: white;
+  font-size: 25px;
+}
+
+.atOurClinicContainer {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.atClinicImgDiv {
+  width: 100%;
+  height: 100%;
+  background: url("/assets/atOurClinicBlackDoc.svg") center/cover no-repeat;
+}
+
+.atOurClinicContainer .atOurClinicRight {
+  background: var(--atServicesGrey);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+.atOurClinicRight .atOurClinicRightBackground {
+  width: 380px;
+  height: 380px;
+}
+.atOurClinicRightBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.atOurclinicWhiteDiv {
+  padding: 60px 50px 60px 40px;
+  background: white;
+  position: absolute;
+  left: 600px;
+  top: 135px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 3px solid var(--primary);
+  border-radius: 5px;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+.atOurclinicWhiteDiv h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.atOurclinicWhiteDiv h2 {
+  font-size: 32px;
+  color: var(--textBlue);
+  font-weight: 600;
+  width: 300px;
+  line-height: 40px;
+}
+
+.atOurclinicWhiteDiv p {
+  color: var(--textGrey);
+  font-size: 14px;
+  width: 580px;
+  margin-top: 15px;
+  line-height: 28px;
+}
+
+.atOurClinicBtn button,
+.docsExpWhiteBtn button {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  padding: 16px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--btnOutline);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  margin-top: 25px;
+}
+
+.atClinicBtnSpan,
+.docsExpBtnSpan {
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atClinicBtnIcon,
+.docsExpBtnIcon {
+  color: var(--primary);
+}
+
+.docsExpertDiv {
+  padding: 100px 230px;
+  background: var(--docsBackground);
+}
+
+.docsExpertTexts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.docsExpertTexts .docsExpertHeadTexts h4 {
+  color: var(--primary);
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.docsExpertTexts .docsExpertHeadTexts h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--textBlue);
+}
+
+.docsExpertTexts p {
+  color: var(--textGrey);
+  width: 840px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.docsExpBottom {
+  display: flex;
+  gap: 45px;
+  margin-top: 40px;
+}
+
+.docsExpBottom .docsExpBottomLeft {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.docsExpBottom .docsExpBottomLeft .docsExpLeftCards {
+  width: 100%;
+  padding: 10px 60px 10px 20px;
+  background-color: var(--docProColour);
+  border-top: 1px solid var(--primary);
+  font-weight: 600;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.docsExpBottom .docsExpBottomLeft .docsExpLeftCards:nth-child(1) {
+  background: var(--primary);
+  color: white;
+  padding: 13px 60px 13px 20px;
+}
+
+.docsExpBottom .docsExpBottomLeft .docsExpLeftCards .docBottomCardImgDiv {
+  width: 40px;
+}
+
+.docsExpBottom .docsExpBottomLeft .docsExpLeftCards .docBottomCardImgDiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.docsExpBottom .docsExpBottomRight {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.docsExpBottomRight .docsExpBottomImg {
+  height: 380px;
+}
+
+.docsExpBottomRight .docsExpBottomImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docsExpWhiteCard {
+  padding: 30px 40px 23px 20px;
+  background: var(--white);
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.2);
+}
+
+.docsExpWhiteCard h3 {
+  font-size: 22px;
+}
+
+.docsExpWhiteCard .docsExpWhiteCardHeadTexts p {
+  color: var(--primary);
+  margin-top: 5px;
+}
+
+.docsExpWhiteCard p {
+  margin-top: 10px;
+  line-height: 28px;
+  font-size: 15px;
+  color: var(--textGrey);
+}
+
+.docsExpWhiteBtn button {
+  padding: 10px 18px;
+}
+
+.testimonialsContainer {
+  display: flex;
+}
+
+.testimonialsContainer .testimonialsLeft {
+  width: 40%;
+  background: url("/assets/testimonialNewBg.svg") center/cover no-repeat;
+  padding-left: 228px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+
+.testimonialsContainer .testimonialsLeft h6 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.testimonialsContainer .testimonialsLeft h4 {
+  margin-top: 15px;
+  font-size: 32px;
+  width: 340px;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+.testimonialsContainer .testmonialsRight {
+  width: 60%;
+  background: var(--grey);
+  padding: 100px 140px 110px 85px;
+  display: flex;
+  gap: 40px;
+}
+
+.testimonialsContainer .testmonialsRight .testimonialsCards {
+  padding: 50px 38px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+.testimonialsContainer .testmonialsRight .testimonialsCards .testimonialsImg {
+  width: 100px;
+  height: 100px;
+  border: none;
+}
+
+.testimonialsContainer
+  .testmonialsRight
+  .testimonialsCards
+  .testimonialsImg
+  img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.testimonialsContainer .testmonialsRight .testimonialsTexts h4 {
+  font-size: 20px;
+  color: var(--textBlue);
+}
+
+.testimonialsContainer .testmonialsRight .testimonialsTexts h6 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: var(--textGrey);
+}
+
+.testimonialsContainer .testmonialsRight .testimonialsTexts h6 span {
+  color: var(--primary);
+}
+
+.testimonialsContainer .testmonialsRight .testimonialsTexts p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--textGrey);
+  line-height: 25px;
+  width: 220px;
+}
+
+.needHelpDiv {
+  background-color: var(--white);
+  padding: 150px 230px;
+  display: flex;
+  gap: 50px;
+}
+
+.needHelpDiv .needHelpleft {
+  width: 100%;
+  background: url("/assets/doctor-patient-ophthalmologist-s-office.jpg")
+    center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.needHelpDiv .needHelpleft .needHelpLeftInner {
+  padding: 50px 80px;
+  background: var(--white);
+  display: flex;
+  gap: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.needHelpPhoneImgDiv {
+  display: flex;
+  gap: 10px;
+}
+
+.needHelpPhoneImgDiv img {
+  width: 35px;
+}
+
+.needHelpPhoneImgDiv p {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--textBlue);
+}
+
+.needHelpDiv .needHelpContact p,
+.needHelpDiv .needHelpEmail p {
+  margin-top: 7px;
+  color: var(--textGrey);
+}
+
+.needHelpDiv .needHelpRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.needHelpDiv .needHelpRight h3,
+.needHelpDiv .needHelpRight h4 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.needHelpDiv .needHelpRight h3 {
+  line-height: 20px;
+  color: var(--textBlue);
+}
+
+.needHelpDiv .needHelpRight h4 {
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+.needHelpDiv .needHelpRight .needHelpRightInputs input,
+.needHelpDiv .needHelpRight .needHelpRightInputs textarea {
+  width: 100%;
+  padding: 30px 0;
+  border: none;
+  border-bottom: 1px solid var(--textGrey);
+  outline: none;
+}
+
+.needHelpDiv .needHelpRightInputs .needHelpEmailAndPhoneInput {
+  display: flex;
+  gap: 10px;
+}
+
+.needHelpDiv .needHelpRight .needHelpRightInputs textarea {
+  padding-bottom: 120px;
+}
+
+.needHelpDiv .needHelpRight .needHelpBtn button {
+  margin-top: 10px;
+  padding: 18px 35px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border: 1px solid var(--btnOutline);
+  color: var(--white);
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+footer .footerTop {
+  padding: 110px 230px;
+  background: var(--footerBlue);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footerTop .footerTopLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .footerTop .footerTopLeft p {
+  color: var(--footerPTexts);
+  font-size: 15px;
+  line-height: 30px;
+  width: 330px;
+  font-weight: 600;
+}
+
+footer .footerTop .footerTopLeft .footerTopEmail,
+footer .footerTop .footerTopLeft .footerTopPhone {
+  display: flex;
+  gap: 20px;
+}
+
+footer .footerTop .footerTopLeft .footerTopEmail .emailTexts h6,
+footer .footerTop .footerTopLeft .footerTopPhone .phoneTexts h6 {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+footer .footerTop .footerTopLeft .footerTopEmail .emailTexts p,
+footer .footerTop .footerTopLeft .footerTopPhone .phoneTexts p {
+  font-size: 15px;
+  color: var(--footerPTexts);
+  margin-top: 15px;
+}
+
+footer .footerDept h4,
+footer .footerUseful h4 {
+  font-size: 22px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+footer .footerDept nav ul,
+footer .footerUseful nav ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+footer .footerDept nav ul li,
+footer .footerUseful nav ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: var(--footerPTexts);
+  margin-bottom: 22px;
+}
+
+footer .footerDept nav ul li a,
+footer .footerUseful nav ul li a {
+  color: var(--footerPTexts);
+  font-weight: 600;
+}
+
+footer .footerDept nav ul li a:hover,
+footer .footerUseful nav ul li a:hover {
+  color: var(--white);
+}
+
+footer .footerBranchesCard {
+  padding: 38px 45px 38px 30px;
+  border-bottom: 1px solid var(--primary);
+  background-color: var(--footerCard);
+  border-radius: 2px;
+  height: 100%;
+}
+
+footer .footerBranchesCard .centralBranches {
+  margin-top: 20px;
+}
+
+footer .footerBranchesCard .usaBranches h6,
+footer .footerBranchesCard .centralBranches h6 {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+footer .footerBranchesCard .usaBranches .branchesAddress,
+footer .footerBranchesCard .usaBranches .branchesPhone,
+footer .footerBranchesCard .centralBranches .branchesAddress,
+footer .footerBranchesCard .centralBranches .branchesPhone {
+  color: var(--footerPTexts);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 14px;
+  width: 286px;
+}
+
+footer .footerBranchesCard .usaBranches .branchesAddress {
+  line-height: 30px;
+}
+
+footer .footerBottom {
+  padding: 22px 230px;
+  background: var(--footerBottom);
+  border-top: 1px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+footer .footerBottom .footerBottomLeft p {
+  font-weight: 400;
+}
+
+footer .footerBottom .footerBottomLeft p span {
+  font-weight: 600;
+}
+footer .footerBottom .footerBottomRight {
+  display: flex;
+  gap: 20px;
+}
+
+footer .footerBottom .footerBottomRight {
+  font-weight: 600;
+}
+
+footer .footerBottom .footerBottomRight a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer .footerBottom .footerBottomRight a:hover {
+  font-size: 16px;
+}
+
+footer .footerBottom .footerBottomRight a .bx {
+  font-size: 20px;
+}
+footer .footerBottom .footerBottomRight a .bxl-linkedin {
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 40px;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: var(--secondary);
+    padding-top: 20px;
+  }
+
+  header nav ul li .liAnchor,
+  header nav ul .liHidden a {
+    color: var(--white);
+  }
+
+  header nav ul .liHidden {
+    display: flex;
+  }
+
+  header .btnDiv {
+    display: none;
+  }
+
+  header .toggle-menu {
+    display: flex;
+  }
+
+  main .mainContainer {
+    padding: 0 40px;
+    gap: 35px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  main .hDiv {
+    width: 430px;
+  }
+
+  main .hDiv .meet,
+  .best {
+    font-size: 65px;
+  }
+
+  main .mainBtn button {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  section .sectionInner {
+    flex-direction: column;
+    padding: 80px 40px;
+    gap: 80px;
+  }
+
+  section .sectionInner .sectionCardImg {
+    width: 100%;
+  }
+
+  section .sectionInner .sectionCardImg img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .sectionTwoSect .sectionTwo {
+    background-position: 20%;
+    flex-direction: column;
+    padding: 120px 40px;
+    gap: 65px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .sectionTwoLeftImg {
+    width: 100%;
+    height: 90%;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder {
+    padding: 40px 50px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts h3 {
+    width: 640px;
+  }
+
+  .servicesDept {
+    padding: 70px 40px;
+  }
+
+  .servicesDept .servicesTexts p {
+    width: 700px;
+  }
+
+  .servicesDept .servicesCards {
+    flex-direction: column;
+  }
+
+  .servicesDept .servicesCards .eyeCare .servicesImgDiv {
+    height: 380px;
+  }
+
+  .atOurClinicContainer {
+    height: 870px;
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+
+  .atClinicImgDiv {
+    background-position: top;
+    height: 60%;
+  }
+
+  .atOurclinicWhiteDiv {
+    padding: 40px 20px 50px 40px;
+    width: 90%;
+    left: 40px;
+    top: 335px;
+  }
+
+  .atOurClinicContainer .atOurClinicRight {
+    background-color: var(--white);
+  }
+
+  .atOurClinicRight .atOurClinicRightBackground img {
+    display: none;
+  }
+
+  .atOurClinicBtn button,
+  .docsExpWhiteBtn button {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+  .docsExpertDiv {
+    padding: 60px 40px;
+  }
+
+  .docsExpertTexts p {
+    width: 500px;
+  }
+
+  .docsExpBottom {
+    flex-direction: column;
+  }
+
+  .docsExpBottom .docsExpBottomLeft {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .docsExpBottom .docsExpBottomLeft .docsExpLeftCards {
+    width: 48%;
+    border: none;
+  }
+
+  .docsExpBottom .docsExpBottomRight {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+  .docsExpBottomRight .docsExpBottomImg {
+    height: 430px;
+  }
+
+  .docsExpBottomRight .docsExpBottomImg img {
+    object-position: top;
+  }
+
+  .docsExpWhiteCard {
+    margin-bottom: 20px;
+  }
+
+  .testimonialsContainer {
+    flex-direction: column;
+  }
+
+  .testimonialsContainer .testimonialsLeft {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .testimonialsContainer .testimonialsLeft h4 {
+    text-align: center;
+  }
+
+  .testimonialsContainer .testimonialsLeft h4 {
+    margin-bottom: 40px;
+  }
+
+  .testimonialsContainer .testmonialsRight {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 40px 110px 40px;
+    background-color: var(--primary);
+  }
+
+  .testimonialsContainer .testmonialsRight .testimonialsCards {
+    padding: 35px 20px;
+  }
+
+  .testimonialsContainer .testmonialsRight .testimonialsTexts p {
+    font-size: 16px;
+    line-height: 25px;
+    width: 550px;
+    margin-top: 10px;
+  }
+
+  .needHelpDiv {
+    padding: 55px 40px;
+    flex-direction: column;
+  }
+
+  .needHelpDiv .needHelpleft {
+    height: 400px;
+    background-position: top;
+  }
+
+  .needHelpDiv .needHelpleft .needHelpLeftInner {
+    padding: 30px 140px;
+  }
+
+  .needHelpDiv .needHelpRight .needHelpRightInputs input,
+  .needHelpDiv .needHelpRight .needHelpRightInputs textarea {
+    padding: 22px 0;
+  }
+
+  .needHelpDiv .needHelpRight .needHelpRightInputs textarea {
+    padding-bottom: 95px;
+  }
+
+  .needHelpDiv .needHelpRightInputs .needHelpEmailAndPhoneInput {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .needHelpDiv .needHelpRight .needHelpBtn button {
+    padding: 14px 30px;
+  }
+
+  footer .footerTop {
+    width: 100%;
+    padding: 100px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  footer .footerTop .footerTopLeft,
+  footer .footerTop .footerDept,
+  footer .footerTop .footerUseful,
+  footer .footerTop .footerBranchesCard {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  footer .footerBranchesCard .usaBranches .branchesAddress,
+  footer .footerBranchesCard .centralBranches .branchesAddress {
+    width: 246px;
+  }
+
+  footer .footerBranchesCard .usaBranches .branchesAddress,
+  footer .footerBranchesCard .centralBranches .branchesAddress {
+    line-height: 20px;
+  }
+
+  footer .footerBottom {
+    padding: 22px 40px;
+    gap: 25px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header {
+    height: 50px;
+    padding: 0 20px;
+  }
+
+  header .logoA {
+    width: 75px;
+  }
+
+  header .toggle-menu {
+    font-size: 18px;
+  }
+
+  hr {
+    width: 65px;
+    border-top: 3px solid var(--primary);
+  }
+
+  main {
+    background-position: 71%;
+    height: calc(100vh - 50px);
+  }
+
+  main .mainOverlay {
+    height: calc(100vh - 40px);
+  }
+
+  main .mainContainer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  main p {
+    font-size: 13px;
+  }
+
+  main .hDiv {
+    width: 300px;
+  }
+
+  main .hDiv .meet,
+  .best {
+    font-size: 45px;
+    line-height: 44px;
+  }
+
+  main .mainBtn button {
+    font-size: 13px;
+    padding: 12px;
+    gap: 7px;
+  }
+
+  main .mainBtn button .mainBtnSpan {
+    width: 20px;
+    height: 20px;
+  }
+
+  main .mainBtn button ion-icon {
+    font-size: 15px;
+  }
+
+  section .sectionInner {
+    padding: 40px;
+    gap: 25px;
+  }
+
+  section .sectionInner .sectionOneCard {
+    gap: 15px;
+  }
+
+  section .sectionInner .sectionOneCard .emergencyTexts h6 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  section .sectionInner .sectionOneCard .emergencyTexts p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  section .sectionInner .sectionCardImg {
+    margin-bottom: 30px;
+  }
+
+  .sectionTwoSect .sectionTwo {
+    gap: 40px;
+    padding: 80px 20px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft {
+    height: 90vh;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .sectionTwoLeftImg {
+    width: 100%;
+    height: 60%;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder {
+    padding: 25px 40px;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introCircle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .sectionTwoSect
+    .sectionTwo
+    .sectionTwoLeft
+    .introVideoHolder
+    .introCircle
+    ion-icon {
+    font-size: 35px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introTexts h5 {
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts {
+    text-align: center;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts h3 {
+    width: 380px;
+    font-size: 24px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightIconslower {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightBtn button {
+    justify-self: center;
+  }
+
+  .servicesDept {
+    padding: 60px 20px;
+  }
+
+  .servicesDept .servicesTexts p {
+    width: 360px;
+    font-size: 15px;
+  }
+
+  .servicesDept .servicesCards .eyeCare .servicesImgDiv {
+    height: 280px;
+  }
+
+  .servicesDept .servicesCards .eyeCare .servicesCircle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .servicesDept .servicesCards .eyeCare .servicesCircle .bx-right-arrow-alt {
+    font-size: 22px;
+  }
+
+  .atOurClinicContainer {
+    padding: 60px 20px;
+  }
+
+  .atOurclinicWhiteDiv {
+    padding: 40px 30px 40px 20px;
+    left: 20px;
+    gap: 5px;
+  }
+
+  .atOurclinicWhiteDiv h3 {
+    font-size: 19px;
+  }
+
+  .atOurclinicWhiteDiv h2 {
+    font-size: 26px;
+    line-height: 28px;
+    width: 250px;
+  }
+
+  .atOurclinicWhiteDiv p {
+    width: 350px;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  .atOurClinicBtn button,
+  .docsExpWhiteBtn button {
+    padding: 10px 14px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .atClinicBtnSpan,
+  .docsExpBtnSpan {
+    width: 20px;
+    height: 20px;
+  }
+
+  .docsExpertDiv {
+    padding: 50px 20px;
+  }
+
+  .docsExpertTexts {
+    gap: 10px;
+  }
+
+  .docsExpertTexts .docsExpertHeadTexts h4 {
+    font-size: 22px;
+  }
+
+  .docsExpertTexts .docsExpertHeadTexts h2 {
+    font-size: 24px;
+  }
+
+  .docsExpertTexts p {
+    width: 370px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .docsExpBottom .docsExpBottomLeft {
+    gap: 0;
+  }
+
+  .docsExpBottom .docsExpBottomLeft .docsExpLeftCards {
+    width: 100%;
+    padding: 8px 40px 8px 20px;
+    border-top: 1px solid var(--primary);
+  }
+
+  .docsExpBottom .docsExpBottomLeft .docsExpLeftCards:nth-child(1) {
+    padding: 10px 40px 10px 20px;
+  }
+
+  .docsExpBottom .docsExpBottomLeft .docsExpLeftCards .docBottomCardImgDiv {
+    width: 35px;
+  }
+
+  .docsExpBottom .docsExpBottomLeft .docsExpLeftCards p {
+    font-size: 14px;
+  }
+
+  .docsExpBottomRight .docsExpBottomImg {
+    height: 380px;
+  }
+
+  .docsExpWhiteCard {
+    padding: 25px 28px 28px 20px;
+  }
+
+  .docsExpWhiteCard h3 {
+    font-size: 20px;
+  }
+
+  .docsExpWhiteCard .docsExpWhiteCardHeadTexts p {
+    font-size: 12px;
+  }
+
+  .docsExpWhiteCard p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .docsExpWhiteBtn button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .testimonialsContainer .testimonialsLeft {
+    height: 200px;
+  }
+
+  .testimonialsContainer .testimonialsLeft h6 {
+    font-size: 16px;
+  }
+
+  .testimonialsContainer .testimonialsLeft h4 {
+    margin-top: 10px;
+    font-size: 25px;
+    width: 280px;
+    line-height: 28px;
+  }
+
+  .testimonialsContainer .testmonialsRight {
+    padding: 0 20px 40px 20px;
+    gap: 20px;
+  }
+
+  .testimonialsContainer .testmonialsRight .testimonialsTexts p {
+    width: 340px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .testimonialsContainer .testmonialsRight .testimonialsCards .testimonialsImg {
+    width: 85px;
+    height: 85px;
+  }
+
+  .needHelpDiv {
+    padding: 55px 20px;
+  }
+
+  .needHelpDiv .needHelpleft .needHelpLeftInner {
+    padding: 30px 90px;
+    flex-direction: column;
+  }
+
+  .needHelpPhoneImgDiv img {
+    width: 28px;
+  }
+
+  .needHelpPhoneImgDiv p {
+    font-size: 16px;
+  }
+
+  .needHelpDiv .needHelpContact p,
+  .needHelpDiv .needHelpEmail p {
+    font-size: 14px;
+  }
+
+  .needHelpDiv .needHelpRight {
+    align-items: center;
+  }
+
+  .needHelpDiv .needHelpRight h3,
+  .needHelpDiv .needHelpRight h4 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .needHelpDiv .needHelpRight .needHelpRightInputs {
+    width: 100%;
+  }
+
+  footer .footerTop {
+    padding: 70px 20px;
+  }
+
+  footer .footerTop .footerTopLeft p {
+    font-size: 15px;
+    line-height: 22px;
+    width: 300px;
+  }
+
+  footer .footerTop .footerTopLeft,
+  footer .footerTop .footerDept,
+  footer .footerTop .footerUseful,
+  footer .footerTop .footerBranchesCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer .footerBottom {
+    padding: 22px 20px;
+  }
+
+  footer .footerBottom .footerBottomLeft p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    background-position: 70%;
+  }
+
+  main .mainBtn button .mainBtnSpan {
+    width: 17px;
+    height: 17px;
+  }
+
+  main .mainBtn button ion-icon {
+    font-size: 13px;
+  }
+
+  section .sectionInner {
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft {
+    height: 80vh;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .sectionTwoLeftImg {
+    width: 100%;
+    height: 55%;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder {
+    padding: 25px 17px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts h3 {
+    font-size: 22px;
+    line-height: 30px;
+    width: 330px;
+  }
+
+  .sectionTwoSect
+    .sectionTwo
+    .sectionTwoRight
+    .sectionTwoRightTexts
+    .ourCentres {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .servicesDept .servicesTexts .servicesHeadTexts h4 {
+    font-size: 20px;
+  }
+
+  .servicesDept .servicesTexts .servicesHeadTexts h2 {
+    font-size: 24px;
+  }
+
+  .servicesDept .servicesTexts p {
+    width: 330px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .docsExpertTexts .docsExpertHeadTexts h4 {
+    font-size: 20px;
+  }
+
+  .atOurClinicContainer {
+    height: 890px;
+  }
+
+  .atOurclinicWhiteDiv {
+    padding: 20px 40px 35px 20px;
+  }
+
+  .atOurclinicWhiteDiv h2 {
+    font-size: 22px;
+    width: 250px;
+  }
+
+  .atOurclinicWhiteDiv p {
+    width: 250px;
+    font-size: 13px;
+  }
+
+  .atOurClinicBtn button,
+  .docsExpWhiteBtn button {
+    margin-top: 15px;
+  }
+
+  .docsExpertTexts p {
+    width: 300px;
+    font-size: 13px;
+  }
+
+  .docsExpBottomRight .docsExpBottomImg {
+    height: 350px;
+  }
+
+  .testimonialsContainer .testimonialsLeft {
+    height: 180px;
+  }
+
+  .testimonialsContainer .testimonialsLeft h6 {
+    font-size: 10px;
+  }
+
+  .testimonialsContainer .testimonialsLeft h4 {
+    margin-top: 5px;
+    font-size: 16px;
+    width: 200px;
+    line-height: 24px;
+  }
+
+  .testimonialsContainer .testmonialsRight .testimonialsTexts p {
+    width: 260px;
+    font-size: 12px;
+  }
+
+  .needHelpDiv .needHelpleft .needHelpLeftInner {
+    padding: 30px 75px;
+  }
+
+  .needHelpPhoneImgDiv img {
+    width: 20px;
+  }
+
+  .needHelpPhoneImgDiv p {
+    font-size: 14px;
+  }
+
+  .needHelpDiv .needHelpContact p,
+  .needHelpDiv .needHelpEmail p {
+    font-size: 12px;
+  }
+
+  .needHelpDiv .needHelpRight {
+    gap: 10px;
+  }
+
+  .needHelpDiv .needHelpRight h3,
+  .needHelpDiv .needHelpRight h4 {
+    font-size: 22px;
+  }
+
+  .needHelpDiv .needHelpRight h4 {
+    margin-top: 5px;
+  }
+
+  .needHelpDiv .needHelpRight .needHelpRightInputs input,
+  .needHelpDiv .needHelpRight .needHelpRightInputs textarea {
+    padding: 12px 0;
+  }
+
+  .needHelpDiv .needHelpRight .needHelpRightInputs textarea {
+    padding-bottom: 65px;
+  }
+
+  .needHelpDiv .needHelpRight .needHelpBtn button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  footer .footerTop {
+    overflow-x: hidden;
+  }
+
+  footer .footerTop .footerTopLeft p {
+    width: 320px;
+    font-family: 14px;
+  }
+
+  footer .footerTop .footerTopLeft .footerTopEmail .emailImg img,
+  footer .footerTop .footerTopLeft .footerTopPhone .phoneImg img {
+    width: 30px;
+  }
+
+  footer .footerTop .footerTopLeft .footerTopEmail .emailTexts h6,
+  footer .footerTop .footerTopLeft .footerTopPhone .phoneTexts h6 {
+    font-size: 16px;
+  }
+
+  footer .footerTop .footerTopLeft .footerTopEmail .emailTexts p,
+  footer .footerTop .footerTopLeft .footerTopPhone .phoneTexts p {
+    font-size: 14px;
+    color: var(--footerPTexts);
+    margin-top: 5px;
+  }
+
+  footer .footerBottom {
+    gap: 14px;
+  }
+
+  footer .footerBottom .footerBottomRight a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  main .mainContainer {
+    gap: 15px;
+  }
+
+  main .hDiv {
+    width: 230px;
+  }
+
+  main .hDiv .meet,
+  .best {
+    font-size: 35px;
+  }
+
+  main .mainBtn button ion-icon {
+    font-size: 9px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder {
+    padding: 28px 13px;
+    gap: 15px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introTexts h5 {
+    font-size: 16px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoLeft .introVideoHolder .introTexts p {
+    width: 230px;
+    font-size: 14px;
+  }
+
+  .sectionTwoSect
+    .sectionTwo
+    .sectionTwoRight
+    .sectionTwoRightTexts
+    .hasBeenTxt {
+    font-size: 16px;
+  }
+
+  .sectionTwoSect .sectionTwo .sectionTwoRight .sectionTwoRightTexts h3 {
+    width: 275px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .sectionTwoSect
+    .sectionTwo
+    .sectionTwoRight
+    .sectionTwoRightTexts
+    .ourCentres {
+    width: 282px;
+    font-size: 13px;
+  }
+
+  .servicesDept .servicesTexts p {
+    width: 290px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .servicesDept .servicesCards .eyeCare .servicesImgDiv {
+    height: 200px;
+  }
+
+  .servicesDept .servicesCards .eyeCare .serviceCardtexts .servicesDeptHead {
+    width: 160px;
+  }
+
+  .servicesDept .servicesCards .eyeCare .serviceCardtexts h3 {
+    font-size: 20px;
+  }
+
+  .needHelpDiv .needHelpleft .needHelpLeftInner {
+    padding: 30px 60px;
+  }
+
+  footer .footerTop .footerTopLeft p {
+    width: 280px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  footer .footerTop .footerTopLeft .footerTopEmail .emailTexts h6,
+  footer .footerTop .footerTopLeft .footerTopPhone .phoneTexts h6 {
+    font-size: 14px;
+  }
+
+  footer .footerTop .footerTopLeft .footerTopEmail .emailTexts p,
+  footer .footerTop .footerTopLeft .footerTopPhone .phoneTexts p {
+    font-size: 12px;
+    color: var(--footerPTexts);
+    margin-top: 2px;
+  }
+}

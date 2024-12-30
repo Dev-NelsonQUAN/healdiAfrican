@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healdi</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="logoA" href="/html/index.html">
+        <img src="/assets/heladiLogo.png" alt="Healdi Logo" />
+      </a>
+
+      <nav>
+        <ul>
+          <li><a class="liAnchor" href="#"> HOME </a></li>
+          <li><a class="liAnchor" href="#about"> ABOUT </a></li>
+          <li><a class="liAnchor" href="#contact"> CONTACT </a></li>
+
+          <!-- <div class="toggleLi"> -->
+          <li class="liHidden">
+            <a href="/html/dashboard.html">DASHBOARD</a>
+          </li>
+          <li class="liHidden"><a href="/html/signIn.html">SIGN IN</a></li>
+          <!-- </div> -->
+        </ul>
+      </nav>
+
+      <div class="btnDiv">
+        <a href="/html/dashboard.html"
+          ><button class="dashboardBtn">DASHBOARD</button></a
+        >
+        <a href="/html/signIn.html"
+          ><button class="signInBtn">SIGN IN</button></a
+        >
+      </div>
+
+      <!-- <div class="toggle"> -->
+      <i class="bx bx-menu toggle-menu" id="toggleMenu"></i>
+      <!-- </div> -->
+    </header>
+
+    <main>
+      <div class="mainOverlay"></div>
+      <div class="mainContainer">
+        <p>Good Doctor, Healthy Life</p>
+
+        <div class="hDiv">
+          <h2 class="meet">Meet the <span class="best">Best Doctors</span></h2>
+        </div>
+
+        <div class="mainBtn">
+          <a href="/html/bookingForm.html">
+            <button>
+              <span class="mainBtnSpan"
+                ><ion-icon name="chevron-forward"></ion-icon></span
+              >Make Appointment
+            </button>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section>
+      <div class="sectionInner">
+        <div class="sectionOneCard">
+          <div class="emergencyIcons">
+            <img src="/assets/ambulanceIcon.svg" alt="Ambulance Icon" />
+            <!-- <i class="fa-solid fa-shield"></i>
+              <i class='bx bxs-ambulance'></i> -->
+          </div>
+
+          <div class="emergencyTexts">
+            <h6>Emergency Case</h6>
+            <p>
+              With us, Emergencies cases are handled in nano seconds, with our
+              active doctors and nurses who are always on seat 24/7.
+              <!-- Few preferred continual sir led incommode neglected. Discovered
+                too old insensible collecting unpleasant -->
+            </p>
+          </div>
+
+          <div class="sectionPhone">
+            <p class="phone">Phone</p>
+            <p class="number">(+234)00066432</p>
+          </div>
+        </div>
+
+        <div class="sectionCardImg">
+          <img src="/assets/sectionMidImg.svg" alt="A Nurse" />
+        </div>
+
+        <div class="sectionOneCard">
+          <div class="emergencyIcons">
+            <img src="/assets/cancerIcon.svg" alt="Cancer Icon" />
+          </div>
+
+          <div class="emergencyTexts">
+            <h6>Cancer Case</h6>
+            <p>
+              Our oncologists department are kin to ensuring the eradication of
+              cancer, as we prioritize the health of everyone.
+            </p>
+          </div>
+
+          <div class="sectionPhone">
+            <p class="phone">Phone</p>
+            <p class="number">(+234)00066432</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionTwoSect">
+      <div class="sectionTwo">
+        <div class="sectionTwoLeft">
+          <div class="sectionTwoLeftImg"></div>
+
+          <div class="introVideoHolder">
+            <div class="introCircle">
+              <ion-icon name="play"></ion-icon>
+            </div>
+            <div class="introTexts">
+              <h5>See Our Intro Video</h5>
+              <p>
+                If your smile is not coming to you, then you should be coming.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sectionTwoRight">
+          <div class="sectionTwoRightTexts">
+            <p class="hasBeenTxt">HAS BEEN WORKING SINCE 2000</p>
+            <h3>
+              A Great Place to Work. A Great Place to
+              <span class="sectionRecieveTxt"> Receive Care.</span> Leading
+              Medicine.
+            </h3>
+
+            <p class="ourCentres">
+              Our centres are a great place to be as we pay apt attention to
+              your health, regardless of your age, from the elderly down to
+              toddlers. We have all round health workers to always ensure your
+              safety.
+            </p>
+          </div>
+
+          <div class="sectionTwoRightIconslower">
+            <div class="onlineApp">
+              <div class="onlinAeppIcon">
+                <img
+                  src="/assets/onlineAppointmentIcon.svg"
+                  alt="Online Appointment Icon"
+                />
+              </div>
+
+              <p>Online Appointment</p>
+            </div>
+
+            <div class="healthQueries">
+              <div class="healthQueriesIcon">
+                <img
+                  src="/assets/onlineAppointmentIcon.svg"
+                  alt="Online Appointment Icon"
+                />
+              </div>
+              <p>Health Queries</p>
+            </div>
+          </div>
+
+          <div class="sectionTwoRightBtn">
+            <a href="/html/bookingForm.html">
+              <button>
+                <span class="sectionTwoRightBtnSpan"
+                  ><ion-icon
+                    class="sectionTwoSpan"
+                    name="chevron-forward"
+                  ></ion-icon></span
+                >Make appointment
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="servicesDept" id="about">
+      <div class="servicesTexts">
+        <div class="servicesHeadTexts">
+          <h4>SERVICES</h4>
+          <h2>Our Department</h2>
+        </div>
+        <hr />
+        <p>
+          Our services cut across many sectors when it comes to your health, we
+          ensure giving you nothing but the best, with our skilled Specialists
+          across the globe.
+        </p>
+      </div>
+
+      <div class="servicesCards">
+        <div class="eyeCare">
+          <div class="servicesImgDiv">
+            <img
+              src="/assets/eyeCareImg.jpg"
+              alt="Opthalmologist And Patient"
+            />
+          </div>
+
+          <div class="serviceCardtexts">
+            <h3>Eye Care</h3>
+            <p class="suddenTxt">
+              Sudden up my excuses to suffer ladies though or. Bachelor possible
+              marianne one directly confined the mention processes.
+            </p>
+
+            <p class="servicesDeptHead">
+              Department Head:
+              <span class="serviceDocsName">Prof. Jonathan Doe</span>
+            </p>
+          </div>
+          <div class="servicesCircle">
+            <i class="bx bx-right-arrow-alt"></i>
+            <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
+          </div>
+        </div>
+
+        <div class="eyeCare">
+          <div class="servicesImgDiv">
+            <img src="/assets/dentalCareImg.jpg" alt="" />
+          </div>
+
+          <div class="serviceCardtexts">
+            <h3>Dental Care</h3>
+            <p class="sudedenTxt">
+              Sudden up my excuses to suffer ladies though or. Bachelor possible
+              marianne one directly confined the mention processes.
+            </p>
+
+            <p class="servicesDeptHead">
+              Department Head:
+              <span class="serviceDocsName">Prof. Jonathan Doe</span>
+            </p>
+          </div>
+          <div class="servicesCircle">
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+        </div>
+
+        <div class="eyeCare">
+          <div class="servicesImgDiv">
+            <img src="/assets/primaryCareImg.svg" alt="" />
+          </div>
+
+          <div class="serviceCardtexts">
+            <h3>Primary Care</h3>
+            <p class="sudedenTxt">
+              Sudden up my excuses to suffer ladies though or. Bachelor possible
+              marianne one directly confined the mention processes.
+            </p>
+
+            <p class="servicesDeptHead">
+              Department Head:
+              <span class="serviceDocsName">Prof. Jonathan Doe</span>
+            </p>
+          </div>
+          <div class="servicesCircle">
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="atOurClinicContainer">
+      <div class="atClinicImgDiv"></div>
+
+      <div class="atOurClinicRight">
+        <div class="atOurClinicRightBackground">
+          <img
+            src="/assets/dotted-shape.png"
+            alt="A dotted Rectangular Shape"
+          />
+        </div>
+      </div>
+
+      <div class="atOurclinicWhiteDiv">
+        <h3>At Our Clinic</h3>
+        <h2>Our Doctors Specialize In You.</h2>
+
+        <p>
+          Respect forming clothes do in he. Course so piqued no an by appear.
+          Themselves reasonable pianoforte so motionless he as difficulty be.
+          Abode way begin ham there power whole. Suppose neither evident welcome
+        </p>
+
+        <p>
+          Do unpleasing indulgence impossible to conviction. Suppose neither
+          evident welcome it at do civilly uncivil. Sing tall much you get nor.
+        </p>
+
+        <div class="atOurClinicBtn">
+          <button>
+            <span class="atClinicBtnSpan"
+              ><ion-icon
+                class="atClinicBtnIcon"
+                name="chevron-forward"
+              ></ion-icon></span
+            >Doctor Lists
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="docsExpertDiv">
+      <div class="docsExpertTexts">
+        <div class="docsExpertHeadTexts">
+          <h4>DOCTORS</h4>
+          <h2>Meet Our Experts</h2>
+        </div>
+        <hr />
+        <p>
+          It's no news that our doctors are experts in their respective fields.
+          And they deliver these expertise with joy in their hearts.
+        </p>
+      </div>
+
+      <div class="docsExpBottom">
+        <div class="docsExpBottomLeft">
+          <div class="docsExpLeftCards">
+            <div class="docBottomCardImgDiv">
+              <img
+                src="/assets/cardiologistsIcon.svg"
+                alt="Cardiologist icon"
+              />
+            </div>
+            <!-- <i class="flaticon-cardiologist"> </i>
+              <i class="fi fi-tr-user-doctor-hair"></i> -->
+            <p>Cardiologists</p>
+          </div>
+          <div class="docsExpLeftCards">
+            <div class="docBottomCardImgDiv">
+              <img
+                src="/assets/dermatolgistIcon.svg"
+                alt="Dermatologist icon"
+              />
+            </div>
+
+            <p>Dermatologists</p>
+          </div>
+          <div class="docsExpLeftCards">
+            <div class="docBottomCardImgDiv">
+              <img
+                src="/assets/medicineSpecialists.svg"
+                alt="Medical Specialist icon"
+              />
+            </div>
+
+            <p>Medicine Specialists</p>
+          </div>
+          <div class="docsExpLeftCards">
+            <div class="docBottomCardImgDiv">
+              <img
+                src="/assets/familySpecialistIcon.svg"
+                alt="Family Physician Icon"
+              />
+            </div>
+
+            <p>Family Physicians</p>
+          </div>
+        </div>
+
+        <div class="docsExpBottomRight">
+          <div class="docsExpBottomImg">
+            <img src="/assets/ExpertDocOneImg.png" alt="" />
+          </div>
+
+          <div class="docsExpWhiteCard">
+            <div class="docsExpWhiteCardHeadTexts">
+              <h3>Dr. Nelson Ololade</h3>
+              <p>MBBS, BMBS, MBChB, MBBCh</p>
+            </div>
+
+            <p>
+              A dynamic Medical Specialist who encompasses of every Medical
+              aspects, from Surgeon to Opthalmologist, Dentist. And he excels in
+              all and has his Academic degrees from the finest universities in
+              the Universe.
+            </p>
+
+            <div class="docsExpWhiteBtn">
+              <button>
+                <span class="docsExpBtnSpan"
+                  ><ion-icon
+                    class="docsExpBtnIcon"
+                    name="chevron-forward"
+                  ></ion-icon
+                ></span>
+                Read More
+              </button>
+            </div>
+          </div>
+          <div class="docsExpBottomImg">
+            <img src="/assets/ExpertDocTwoImg.png" alt="" />
+          </div>
+
+          <div class="docsExpWhiteCard">
+            <div class="docsExpWhiteCardHeadTexts">
+              <h3>Dr. Olamide Babajide</h3>
+              <p>MBBS, BMBS, MBChB, MBBCh</p>
+            </div>
+
+            <p>
+              A zealous and outstanding who don't judge do her work but goes
+              extra miles, she's always up enusring all patients recieves the
+              healing at all times, and this is even visible to every of our
+              patients.
+            </p>
+
+            <div class="docsExpWhiteBtn">
+              <button>
+                <span class="docsExpBtnSpan"
+                  ><ion-icon
+                    class="docsExpBtnIcon"
+                    name="chevron-forward"
+                  ></ion-icon
+                ></span>
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonialsContainer">
+      <div class="testimonialsLeft">
+        <h6>TESTIMONIALS</h6>
+        <h4>What People Says About Our Services</h4>
+      </div>
+
+      <div class="testmonialsRight">
+        <div class="testimonialsCards">
+          <div class="testimonialsImg">
+            <img
+              src="/assets/doctor-patient-ophthalmologist-s-office.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="testimonialsTexts">
+            <h4>Joana Chidi</h4>
+            <h6>PATIENT OF <span>SURGERY</span></h6>
+            <p>
+              A surgery well performed, I'm fine now and no medical equipments was left in me, I'm forever grateful, Healdi.
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonialsCards">
+          <div class="testimonialsImg">
+            <img
+              src="/assets/doctor-patient-ophthalmologist-s-office.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="testimonialsTexts">
+            <h4>Ola Trevor</h4>
+            <h6>PATIENT OF <span>CANCER</span></h6>
+            <p>
+              Cancer seems as nothing when I got here, and now I'm so damn free
+              of it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="needHelpDiv">
+      <div class="needHelpleft">
+        <div class="needHelpLeftInner">
+          <div class="NeedHelpLeftPhone">
+            <div class="needHelpPhoneImgDiv">
+              <img src="/assets/outlinePhoneIcon.svg" alt="Phone Icon" />
+              <p>PHONE</p>
+            </div>
+
+            <div class="needHelpContact">
+              <p>+234-90-3456-394</p>
+            </div>
+          </div>
+
+          <div class="NeedHelpLeftEmail">
+            <div class="needHelpPhoneImgDiv">
+              <img src="/assets/outlineMailIcon.svg" alt="Mail Icon" />
+              <p>EMAIL</p>
+            </div>
+
+            <div class="needHelpEmail">
+              <p>info@healdi.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="needHelpRight">
+        <div class="needHelpRightTexts">
+          <h3>Need Help?</h3>
+          <h4>Let's ask your questions</h4>
+        </div>
+
+        <div class="needHelpRightInputs">
+          <input type="text" class="Name" placeholder="Name" />
+
+          <div class="needHelpEmailAndPhoneInput">
+            <input type="email" placeholder="Email*" required />
+            <input type="number" placeholder="Phone" />
+          </div>
+
+          <textarea
+            placeholder="Tell Us About Your Project*"
+            required
+          ></textarea>
+        </div>
+
+        <div class="needHelpBtn">
+          <button>Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="contact">
+      <!-- <div class="footerTopInner"> -->
+      <div class="footerTop">
+        <div class="footerTopLeft">
+          <div class="healdiFooterLogo">
+            <img src="/assets/healdiLightLogo.png" alt="Healdi Light Logo" />
+          </div>
+
+          <p>
+            We are swift and relaible when it comes to health, a trial wil
+            definitely convince, our Patients can attest to this.
+          </p>
+
+          <div class="footerTopEmail">
+            <div class="emailImg">
+              <img src="/assets/outlineMailIcon.svg" alt="Mail Icon" />
+            </div>
+            <div class="emailTexts">
+              <h6>Email:</h6>
+              <p>support@validtemplates.com</p>
+            </div>
+          </div>
+
+          <div class="footerTopPhone">
+            <div class="phoneImg">
+              <img src="/assets/outlinePhoneIcon.svg" alt="Phone Icon" />
+            </div>
+
+            <div class="phoneTexts">
+              <h6>Phone:</h6>
+              <p>+44-20-7328-4499</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footerDept">
+          <h4>Department</h4>
+
+          <nav>
+            <ul>
+              <li><a href="#">Medicine & Health</a></li>
+              <li><a href="#">Dental Care</a></li>
+              <li><a href="#">Eye Treatment</a></li>
+              <li><a href="#">Children Care</a></li>
+              <li><a href="#">Traumatology</a></li>
+              <li><a href="#">X-ray</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footerUseful">
+          <h4>Useful Links</h4>
+
+          <nav>
+            <ul>
+              <li><a href="#">Ambulance</a></li>
+              <li><a href="#">Emergency</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footerBranchesCard">
+          <div class="usaBranches">
+            <h6>Paris Branches:</h6>
+            <p class="branchesAddress">
+              4992 Nelson Avenue, Saint German, Paris.
+            </p>
+            <p class="branchesPhone">Phone: 651-379-4698</p>
+          </div>
+
+          <div class="centralBranches">
+            <h6>Central Branches:</h6>
+            <p class="branchesAddress">
+              2001 Lekki Phase 1, Lekki, Lagos.
+            </p>
+            <p class="branchesPhone">Phone: 651-379-4698</p>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <div class="footerBottom">
+        <div class="footerBottomLeft">
+          <p>Copyright © 2024. Designed by <span>Nelson QUAN</span></p>
+        </div>
+
+        <div class="footerBottomRight">
+          <div class="facebook">
+            <a href="www.facebook.com" target="_blank" rel="noopener">
+              <i class="bx bxl-facebook"></i>
+              <p>Facebook</p>
+            </a>
+          </div>
+          <div class="linkedin">
+            <a href="www.linkedin.com" target="_blank" rel="noopener">
+              <i class="bx bxl-linkedin"></i>
+              <!-- <i class='bx bxl-linkedin-square' ></i> -->
+              <p>LinkedIn</p>
+            </a>
+          </div>
+          <div class="youtube">
+            <a href="www.youtube.com" target="_blank" rel="noopener">
+              <i class="bx bxl-youtube"></i>
+              <p>Youtube</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
