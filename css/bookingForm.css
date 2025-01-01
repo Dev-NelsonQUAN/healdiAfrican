@@ -104,6 +104,10 @@ header nav ul li .liAnchor:hover {
   color: var(--white);
 }
 
+header .toggle-menu {
+  display: none;
+}
+
 main {
   background: var(--primary);
   text-align: center;

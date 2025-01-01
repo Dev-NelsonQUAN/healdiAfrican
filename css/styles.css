@@ -224,6 +224,25 @@ main .mainBtn button ion-icon {
   color: var(--primary);
 }
 
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  z-index: 4;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.scrollToTop:hover {
+  background-color: var(--secondary);
+}
+
 section {
   background-color: var(--white);
   border-bottom: 1px solid var(--textGrey);
@@ -1178,9 +1197,13 @@ footer .footerBottom .footerBottomRight a .bxl-linkedin {
     right: 0;
     top: 80px;
     width: 100vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 30px);
     background: var(--secondary);
     padding-top: 20px;
+  }
+
+  header nav ul.view {
+    display: flex;
   }
 
   header nav ul li .liAnchor,
@@ -1221,6 +1244,11 @@ footer .footerBottom .footerBottomRight a .bxl-linkedin {
   main .mainBtn button {
     padding: 14px 16px;
     font-size: 14px;
+  }
+
+  .scrollToTop {
+    padding: 6px 10px;
+    font-size: 20px;
   }
 
   section .sectionInner {
@@ -1460,6 +1488,10 @@ footer .footerBottom .footerBottomRight a .bxl-linkedin {
     width: 75px;
   }
 
+  header nav ul {
+    top: 50px;
+  }
+
   header .toggle-menu {
     font-size: 18px;
   }
@@ -1512,6 +1544,13 @@ footer .footerBottom .footerBottomRight a .bxl-linkedin {
 
   main .mainBtn button ion-icon {
     font-size: 15px;
+  }
+
+  .scrollToTop {
+    right: 10px;
+    bottom: 10px;
+    padding: 2px 6px;
+    font-size: 18px;
   }
 
   section .sectionInner {

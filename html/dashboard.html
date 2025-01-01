@@ -105,15 +105,15 @@
 
               <tbody>
                 <tr>
-                  <td>John Opeyemi</td>
-                  <td>0907567384</td>
-                  <td>Male</td>
-                  <td>Nelson Q.</td>
-                  <td>Dec. 31, 2024</td>
-                  <td>12:00</td>
+                  <td id="userName">John Opeyemi</td>
+                  <td id="number">0907567384</td>
+                  <td id="gender">Male</td>
+                  <td id="doctors">Nelson Q.</td>
+                  <td id="date">Dec. 31, 2024</td>
+                  <td id="time">12:00</td>
                 </tr>
                 <tr>
-                  <td>Abigail Adunnii</td>
+                  <td>Abigail Adunni</td>
                   <td>08123809058</td>
                   <td>Female</td>
                   <td>Ashabi Babajide</td>
@@ -162,5 +162,51 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const userName = document.getElementById("name");
+      const number = document.getElementById("number");
+      const gender = document.getElementById("gender");
+      const doctor = document.getElementById("doctor");
+      const date = document.getElementById("date");
+      const time = document.getElementById("time");
+
+      const allDatas = {
+        name: "QUAN",
+        number: "09012894785",
+        gender: "Female",
+        doctor: "Nelson Q",
+        date: "12/02/25",
+        time: "12:00",
+      };
+
+      if (name === "") {
+        localStorage.setItem("name", JSON.stringify(allDatas));
+        // localStorage.setItem("name", JSON.stringify(allDatas));
+
+        const getAllDatas = localStorage.getItem("name");
+        const parseData = JSON.parse(getAllDatas);
+
+      document.getElementById("userName").innerHTML =
+          localStorage.getItem(allDatas.name);
+        // console.log(all);
+
+        // document.getElementById("number").innerHTML =
+        //   localStorage.getItem("number");
+        // document.getElementById("gender").innerHTML =
+        //   localStorage.getItem("gender");
+        // document.getElementById("doctor").innerHTML =
+        //   localStorage.getItem("doctor");
+        // document.getElementById("date").innerHTML =
+        //   localStorage.getItem("date");
+        // document.getElementById("time").innerHTML =
+        //   localStorage.getItem("time");
+        // console.log(get);
+      } else {
+        document.getElementById("userName").innerHTML =
+          "Oops, sorry for the errors!";
+      }
+    </script>
+    <!-- <script src="/script.js"></script> -->
   </body>
 </html>

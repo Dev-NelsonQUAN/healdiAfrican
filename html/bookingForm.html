@@ -82,5 +82,56 @@
         </div>
       </form>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all input elements in the form
+        const inputs = document.querySelectorAll("input, select");
+
+        // Load saved form data from localStorage
+        loadFormData();
+
+        // Add event listeners to save input data on change
+        inputs.forEach((input) => {
+          input.addEventListener("input", (event) => {
+            saveFormData();
+          });
+        });
+
+        // Function to save form data to localStorage
+        function saveFormData() {
+          const formData = {};
+
+          // Loop through all input fields and store their values
+          inputs.forEach((input) => {
+            if (input.type === "checkbox") {
+              formData[input.name] = input.checked;
+            } else {
+              formData[input.name] = input.value;
+            }
+          });
+
+          // Store the data in localStorage
+          localStorage.setItem("formData", JSON.stringify(formData));
+        }
+
+        // Function to load saved form data from localStorage
+        function loadFormData() {
+          const savedData = localStorage.getItem("formData");
+          if (savedData) {
+            const formData = JSON.parse(savedData);
+
+            // Populate form fields with saved data
+            inputs.forEach((input) => {
+              if (input.type === "checkbox") {
+                input.checked = formData[input.name] || false;
+              } else if (input.name) {
+                input.value = formData[input.name] || "";
+              }
+            });
+          }
+        }
+      });
+    </script>
   </body>
 </html>
