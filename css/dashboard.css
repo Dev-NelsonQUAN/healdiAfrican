@@ -67,13 +67,23 @@ aside nav ul li {
   align-items: center;
   font-size: 16px;
   font-weight: 600;
+  gap: 12px;
 }
 
-aside nav ul li:hover {
+aside nav ul li:hover,
+aside nav ul li span ion-icon:hover,
+aside nav ul li span .bx:hover {
   background-color: var(--white);
   color: var(--primary);
   border-radius: 12px 0 0 12px;
   border: none;
+}
+
+aside nav ul li span ion-icon,
+aside nav ul li span .bx {
+  display: flex;
+  align-self: center;
+  font-size: 22px;
 }
 
 .header {
@@ -96,6 +106,7 @@ aside nav ul li:hover {
 .header .headerContainer .search {
   width: 450px;
   padding: 10px;
+  position: relative;
 }
 
 .header .headerContainer .search label input {
@@ -112,6 +123,13 @@ aside nav ul li:hover {
 .header .headerContainer .search label input::placeholder {
   font-size: 14px;
   font-weight: 600;
+}
+
+.header .headerContainer .search label ion-icon {
+  position: absolute;
+  left: 20px;
+  top: 22px;
+  color: var(--textGrey);
 }
 
 .header .userImg {
@@ -169,6 +187,9 @@ aside nav ul li:hover {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .dashboardChildren .cardsDiv .cards:nth-child(1) .roundIcon {
   background: var(--cardOneInner);
@@ -178,6 +199,12 @@ aside nav ul li:hover {
 }
 .dashboardChildren .cardsDiv .cards:nth-child(3) .roundIcon {
   background: var(--cardThreeInner);
+}
+
+.dashboardChildren .cardsDiv .cards .roundIcon ion-icon,
+.dashboardChildren .cardsDiv .cards .roundIcon .bx {
+  color: white;
+  font-size: 30px;
 }
 
 .dashboardChildren .cardsDiv .cards .cardsTxts p {
@@ -191,10 +218,10 @@ aside nav ul li:hover {
 }
 
 .dashboardChildren .dashboardDetails .dashboardTable {
-    border: 2px solid var(--primary);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    margin: 20px 0 20px 0;
-    border-radius: 5px;
+  border: 2px solid var(--primary);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px 0 20px 0;
+  border-radius: 5px;
 }
 
 .dashboardChildren .dashboardDetails table {
@@ -240,18 +267,17 @@ aside nav ul li:hover {
 }
 
 .dashboardChildren .dashboardDetails .viewAll {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .dashboardChildren .dashboardDetails .viewAll button {
-    display: flex;
-    justify-self: center;
-    margin-top: 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--primary);
-    background: transparent;
-    cursor: pointer;
-    border: none;
+  display: flex;
+  justify-self: center;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+  background: transparent;
+  cursor: pointer;
+  border: none;
 }
-

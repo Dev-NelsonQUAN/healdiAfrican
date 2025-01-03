@@ -12,22 +12,34 @@
         <div class="overlay"></div>
         <div class="imgDiv">
           <a href="/html/index.html"
-          ><img class="imgLight" src="/assets/healdiLightLogo.png" alt="Healdi Logo"
-          />
-          <img class="imgColoured" src="/assets/heladiLogo.png" alt="Healdi Logo">
+            ><img
+              class="imgLight"
+              src="/assets/healdiLightLogo.png"
+              alt="Healdi Logo"
+            />
+            <img
+              class="imgColoured"
+              src="/assets/heladiLogo.png"
+              alt="Healdi Logo"
+            />
           </a>
         </div>
       </div>
 
-      <form>
+      <form id="login">
         <div class="rightTexts">
           <label>Welcome Back</label>
           <p>We are glad to have You back</p>
         </div>
 
         <div class="inputsAndP">
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
+          <input id="email" type="email" placeholder="Email" required />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
           <p>
             Don't have an account?
             <span><a href="/html/signUp.html">Sign Up</a></span>
@@ -39,5 +51,51 @@
         </div>
       </form>
     </div>
+
+    <script>
+      const loggedinUsers = document.querySelector("#login");
+      loggedinUsers.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const userMail = document.getElementById("email").value.trim();
+        const userPassword = document.getElementById("password").value.trim();
+
+        const getEmail = localStorage.getItem("email");
+        const getPassword = localStorage.getItem("password");
+
+        if (userMail !== getEmail && userPassword !== getPassword) {
+          Swal.fire({
+            title: "User Not Found",
+            text: "Kindly register!!!",
+            icon: "error",
+          }).then(() => {
+            window.location.href = "signUp.html";
+          });
+        } else if (userMail !== getEmail && userPassword === getPassword) {
+          Swal.fire({
+            title: "Wrong Email",
+            text: "Kindly check your password",
+            icon: "error",
+          });
+          // alert("Check your email");
+        } else if (userPassword !== getPassword) {
+          Swal.fire({
+            title: "Incorrect Password",
+            text: "Check your password",
+            icon: "error",
+          });
+        } else {
+          Swal.fire({
+            title: "Logged In Successully",
+            text: "You are now logged in successfully!",
+            icon: "success",
+          }).then(() =>{
+            window.location.href = "dashboard.html"
+          })
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

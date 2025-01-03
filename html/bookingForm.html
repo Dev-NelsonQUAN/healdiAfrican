@@ -41,7 +41,7 @@
         <h1>Appointment Form</h1>
       </main>
 
-      <form>
+      <form id="bookingForm">
         <div class="sectionCardHolder">
           <div class="sectionTextsAndImg">
             <label>Make An Appointment</label>
@@ -51,18 +51,18 @@
           </div>
 
           <div class="sectionInputs">
-            <input type="text" placeholder="Name" />
-            <input type="number" placeholder="Phone" />
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="number" placeholder="Phone" name="phone" required />
 
             <div class="sectionInputsLower">
               <div class="sectionCustomSelects">
-                <select>
+                <select name="gender" required>
                   <option value="">--Gender--</option>
                   <option value="male">Male</option>
-                  <option value="memale">Female</option>
+                  <option value="female">Female</option>
                 </select>
 
-                <select>
+                <select name="doctor" required>
                   <option value="">--Doctors--</option>
                   <option value="nelson">Nelson Q.</option>
                   <option value="ashabi">Ashabi Babajide</option>
@@ -71,13 +71,13 @@
               </div>
 
               <div class="sectionDateAndTimeInput">
-                <input type="date" placeholder="Date" />
-                <input type="time" placeholder="Time" />
+                <input type="date" name="date" required />
+                <input type="time" name="time" required />
               </div>
             </div>
           </div>
           <div class="bookBtn">
-            <button>Book Appointment</button>
+            <button type="submit">Book Appointment</button>
           </div>
         </div>
       </form>
@@ -85,53 +85,59 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Get all input elements in the form
-        const inputs = document.querySelectorAll("input, select");
+        const form = document.getElementById("bookingForm");
 
-        // Load saved form data from localStorage
-        loadFormData();
+        // Add event listener for form submission
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
 
-        // Add event listeners to save input data on change
-        inputs.forEach((input) => {
-          input.addEventListener("input", (event) => {
+          if (form.checkValidity()) {
             saveFormData();
-          });
+
+            // Show SweetAlert success message
+            Swal.fire({
+              title: "Submission Successful!",
+              text: "Thank You for submitting!",
+              icon: "success",
+              timer: null, // Prevent auto-close
+            }).then(() => {
+              window.location.href = "dashboard.html";
+            });
+          } else {
+            // Show SweetAlert error message
+            Swal.fire({
+              title: "Form Incomplete",
+              text: "Please fill out all required fields.",
+              icon: "error",
+            });
+          }
         });
 
-        // Function to save form data to localStorage
         function saveFormData() {
-          const formData = {};
+          const formData = {}; // Initialize formData object
+
+          const inputs = form.querySelectorAll("input, select");
 
           // Loop through all input fields and store their values
           inputs.forEach((input) => {
-            if (input.type === "checkbox") {
-              formData[input.name] = input.checked;
-            } else {
-              formData[input.name] = input.value;
-            }
+            formData[input.name] = input.value.trim();
           });
 
-          // Store the data in localStorage
-          localStorage.setItem("formData", JSON.stringify(formData));
-        }
+          // Retrieve existing appointments from localStorage
+          const existingAppointments =
+            JSON.parse(localStorage.getItem("appointments")) || [];
 
-        // Function to load saved form data from localStorage
-        function loadFormData() {
-          const savedData = localStorage.getItem("formData");
-          if (savedData) {
-            const formData = JSON.parse(savedData);
+          // Add the new appointment to the existing appointments
+          existingAppointments.push(formData);
 
-            // Populate form fields with saved data
-            inputs.forEach((input) => {
-              if (input.type === "checkbox") {
-                input.checked = formData[input.name] || false;
-              } else if (input.name) {
-                input.value = formData[input.name] || "";
-              }
-            });
-          }
+          // Store the updated array in localStorage
+          localStorage.setItem(
+            "appointments",
+            JSON.stringify(existingAppointments)
+          );
         }
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

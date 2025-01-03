@@ -14,8 +14,8 @@ scrollToTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
-  });
-});
+  })
+})
 
 const toggleMenu = document.getElementById("toggleMenu");
 const ulShow = document.getElementById("ulShow");
@@ -24,7 +24,36 @@ toggleMenu.addEventListener("click", () => {
   ulShow.classList.toggle("view");
 });
 
+// document.querySelector("#signUpForm").addEventListener("submit", (event) => {
+//   event.preventDefault();
 
+//   const userName = document.getElementById("signUpName").value;
+//   const email = document.getElementById("signUpEmail").value;
+//   const password = document.getElementById("signUpPassword").value;
+
+//   localStorage.setItem("username", userName);
+//   localStorage.setItem("email", email);
+//   localStorage.setItem("password", password);
+//   alert("Data saved to local storage");
+// });
+
+document.querySelector("#login").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const userMail = document.getElementById("email").value;
+  const userPassword = document.getElementById("password").value;
+
+  const saveUser = localStorage.getItem("email");
+  const savePassword = localStorage.getItem("pasowrd");
+
+  if (userMail === saveUser && userPassword === password) {
+    alert("Login Successful! ");
+
+    window.location.href = "signUp.html ";
+  } else {
+    alert("Incorrect password!");
+  }
+});
 
 
 

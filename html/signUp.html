@@ -12,25 +12,45 @@
         <div class="overlay"></div>
         <div class="imgDiv">
           <a href="/html/index.html"
-            ><img class="imgLight" src="/assets/healdiLightLogo.png" alt="Healdi Logo"
-          />
-          <img class="imgColoured" src="/assets/heladiLogo.png" alt="Healdi Logo">
-        </a>
+            ><img
+              class="imgLight"
+              src="/assets/healdiLightLogo.png"
+              alt="Healdi Logo"
+            />
+            <img
+              class="imgColoured"
+              src="/assets/heladiLogo.png"
+              alt="Healdi Logo"
+            />
+          </a>
         </div>
       </div>
 
-      <form>
+      <form id="signUpForm">
         <div class="rightTexts">
           <label>Create Account</label>
           <p>Sign up to get started today</p>
         </div>
 
         <div class="inputsAndP">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <input type="password" placeholder="Confirm Password" required />
-          <p>Already have an account? <span><a href="/html/signIn.html">Login</a></span></p>
+          <input id="signUpName" type="text" placeholder="Name" required />
+          <input id="signUpEmail" type="email" placeholder="Email" required />
+          <input
+            id="signUpPassword"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            id="confirmPassword"
+            type="password"
+            placeholder="Confirm Password"
+            required
+          />
+          <p>
+            Already have an account?
+            <span><a href="/html/signIn.html">Login</a></span>
+          </p>
         </div>
 
         <div class="btn">
@@ -38,5 +58,50 @@
         </div>
       </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      const signUpForm = document.querySelector("#signUpForm");
+
+      signUpForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const userName = document.getElementById("signUpName").value.trim();
+        const email = document.getElementById("signUpEmail").value.trim();
+        const password = document.getElementById("signUpPassword").value.trim();
+        const confirmPassword = document
+          .getElementById("confirmPassword")
+          .value.trim();
+
+        localStorage.setItem("username", userName);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+
+        if (password === confirmPassword) {
+          if (signUpForm.checkValidity()) {
+            Swal.fire({
+              title: "Submission Successful!",
+              text: "Thank You for submitting!",
+              icon: "success",
+            }).then(() => {
+              window.location.href = "signIn.html";
+            });
+          } else {
+            Swal.fire({
+              title: "Form Incomplete",
+              text: "Please all input fields!",
+              icon: "error",
+            });
+          }
+        } else {
+            Swal.fire({
+              title: "Incorrect Password",
+              text: "Kindly check and confirm your password",
+              icon: "error"
+            })
+        }
+      });
+    </script>
   </body>
 </html>
