@@ -228,7 +228,7 @@ main .mainBtn button ion-icon {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  padding: 10px 12px;
+  padding: 6px 10px;
   border-radius: 50%;
   font-size: 24px;
   color: var(--white);
